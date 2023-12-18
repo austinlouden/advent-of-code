@@ -14,8 +14,6 @@ struct Day01: AdventDay {
     entities.reduce(into: 0) { acc, next in
       let first = next.firstDigit()
       let last = String(next.reversed()).firstDigit()
-
-      print("\(next): \(Int(first + last) ?? 0)")
       acc += Int(first + last) ?? 0
     }
   }
